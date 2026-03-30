@@ -1,0 +1,23 @@
+services:
+  # Banco para o Microserviço de Pedidos (SQL)
+  postgres-db:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: pedidos_db
+    ports:
+      - "5432:5432"
+
+  # Banco para o Microserviço de Catálogo (NoSQL)
+  mongo-db:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+
+  # Mensageiro (RabbitMQ) para os serviços conversarem  
+  rabbitmq:
+    image: rabbitmq:3-management
+    ports:
+      - "5672:5672"
+      - "15672:15672" # Painel administrativo: http://localhost:15672 
