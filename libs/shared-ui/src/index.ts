@@ -1,2 +1,3 @@
-export * from './lib/shared-ui';
-export { default as tokens } from './lib/tokens.json';
+import * as tokensData from './lib/tokens.json';
+
+export const tokens = tokensData; 
