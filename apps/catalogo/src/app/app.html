@@ -1,0 +1,8 @@
+
+<div [style.border]="'2px solid ' + primaryColor" style="padding: 20px; margin: 10px; border-radius: 8px;">
+    <h1 [style.color]="primaryColor">Módulo: {{ title | uppercase }}</h1>
+    <p>Status: Integrado com <strong>Shared-UI</strong></p>
+    <p>Cor Primária Ativa: <span [style.background-color]="primaryColor" style="color: white; padding: 2px 5px;">{{ primaryColor }}</span></p>
+</div>
+
+<router-outlet></router-outlet>
